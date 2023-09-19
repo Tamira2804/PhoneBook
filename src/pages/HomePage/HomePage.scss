@@ -1,0 +1,12 @@
+.home-page-container {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-title {
+  font-weight: 50;
+  font-size: 4;
+  text-align: center;
+}

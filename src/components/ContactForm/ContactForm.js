@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/operations';
+import { addContact } from '../../redux/contacts/contacts-operations';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './ContactForm.scss';
-import { selectContactsList } from '../../redux/selectors';
+import { selectContactsList } from '../../redux/contacts/contacts-selectors';
 import { nanoid } from '@reduxjs/toolkit';
 
 const validationSchema = Yup.object().shape({

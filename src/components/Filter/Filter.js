@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilter } from '../../redux/selectors';
-import { setFilter } from '../../redux/filterSlice';
+import { selectFilter } from '../../redux/filter/filter-selectors';
+import { setFilter } from '../../redux/filter/filter-slice';
 import './Filter.scss';
 
 const Filter = () => {
