@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import './AuthNav.scss';
 
 const Navigation = () => (
-  <div className="auth-nav">
-    <NavLink to="/register" className="auth-nav-link">
+  <div className="AuthNav">
+    <NavLink to="/register" className="AuthNav__link">
       Register
     </NavLink>
 
-    <NavLink to="/login" className="auth-nav-link">
+    <NavLink to="/login" className="AuthNav__link">
       Login
     </NavLink>
   </div>

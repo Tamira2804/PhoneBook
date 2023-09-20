@@ -1,12 +1,30 @@
-.home-page-container {
+@import 'styles/shared.scss';
+
+.HomePage__container {
   min-height: calc(100vh - 50px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.home-page-title {
+.HomePage__title {
   font-weight: 50;
   font-size: 4;
   text-align: center;
+  margin-top: 20px;
+}
+
+.Description__text {
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.Description__list {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.Feature {
+  color: $indigo;
+}
+
+.Description__item {
+  margin-bottom: 10px;
 }

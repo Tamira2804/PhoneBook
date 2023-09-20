@@ -1,68 +1,63 @@
-import React from 'react';
-// import { useDispatch } from 'react-redux';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-// import { authOperations } from '../../redux/auth';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import authOperations from '../../redux/auth/auth-operations';
 import './LoginPage.scss';
 
 const LoginView = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    validationSchema: Yup.object({
-      email: Yup.string()
-        .email('Invalid email format')
-        .required('Mandatory field'),
-      password: Yup.string().required('Mandatory field'),
-    }),
-    onSubmit: (values, { resetForm }) => {
-      // dispatch(authOperations.logIn(values));
-      resetForm();
-    },
-  });
+  const handleChange = ({ target: { name, value } }) => {
+    switch (name) {
+      case 'email':
+        return setEmail(value);
+      case 'password':
+        return setPassword(value);
+      default:
+        return;
+    }
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(authOperations.logIn({ email, password }));
+    setEmail('');
+    setPassword('');
+  };
 
   return (
     <div>
       <h1>Login Page</h1>
 
-      <form onSubmit={formik.handleSubmit} className="login-form">
-        <div className="form-group">
-          <label htmlFor="email" className="label">
+      <form onSubmit={handleSubmit} className="LoginForm__container">
+        <div className="LoginForm_group">
+          <label htmlFor="email" className="LoginForm__label">
             Email
           </label>
           <input
             type="email"
-            id="email"
             name="email"
-            className="input"
-            {...formik.getFieldProps('email')}
+            value={email}
+            onChange={handleChange}
+            className="LoginForm__input"
           />
-          {formik.touched.email && formik.errors.email ? (
-            <div className="error">{formik.errors.email}</div>
-          ) : null}
         </div>
 
-        <div className="form-group">
-          <label htmlFor="password" className="label">
+        <div className="LoginForm_group">
+          <label htmlFor="password" className="LoginForm__label">
             Password
           </label>
           <input
             type="password"
-            id="password"
             name="password"
-            className="input"
-            {...formik.getFieldProps('password')}
+            value={password}
+            onChange={handleChange}
+            className="LoginForm__input"
           />
-          {formik.touched.password && formik.errors.password ? (
-            <div className="error">{formik.errors.password}</div>
-          ) : null}
         </div>
 
-        <button type="submit" className="button">
+        <button type="submit" className="Login__btn">
           Login
         </button>
       </form>

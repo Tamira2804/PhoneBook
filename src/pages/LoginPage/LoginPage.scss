@@ -1,43 +1,77 @@
-.login-form {
-  width: 320px;
+@import 'styles/shared.scss';
+
+.LoginForm__container {
+  width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #2a363b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 16px;
+  border: 1px solid $black;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
-.form-group {
+.LoginForm_group {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-.label {
-  font-weight: 700;
-  color: #2a363b;
+.LoginForm__label {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+
+  background-color: $white;
+  padding: 0 5px;
 }
 
-.input {
-  padding: 8px;
-  border: 1px solid #ccc;
+.LoginForm__input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 5px;
+
+  border: 2px solid $grey;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid;
+    border-color: $indigo;
+  }
+
+  &:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
-.error {
-  color: #e84a5f;
+.LoginForm__error {
+  color: $red;
   font-size: 14px;
   margin-top: 4px;
 }
 
-.button {
-  background-color: #2a363b;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+.Login__btn {
+  @extend %button;
 
-.button:hover {
-  background-color: #e84a5f;
+  width: 100%;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: $indigo;
+  color: $white;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    background-color: $indigo-accent;
+  }
+
+  &:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }

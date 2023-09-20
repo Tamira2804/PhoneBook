@@ -4,11 +4,11 @@ import './Navigation.scss';
 
 const Navigation = () => (
   <nav>
-    <NavLink to="/" className="nav-link">
+    <NavLink to="/" className="Nav__link">
       Home
     </NavLink>
 
-    <NavLink to="/contacts" className="nav-link">
+    <NavLink to="/contacts" className="Nav__link">
       Contacts
     </NavLink>
   </nav>
