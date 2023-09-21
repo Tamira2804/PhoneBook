@@ -20,35 +20,36 @@ const App = () => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
-  return !isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute
-              redirectTo="/contacts"
-              component={<RegisterPage />}
-            />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
-          }
-        />
-        <Route
-          path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<Contacts />} />
-          }
-        />
-      </Route>
-    </Routes>
-  );
+  return <h2> App </h2>;
+  // !isRefreshing ? (
+  //   <b>Refreshing user...</b>
+  // ) : (
+  //   <Routes>
+  //     <Route path="/" element={<Layout />}>
+  //       <Route index element={<HomePage />} />
+  //       <Route
+  //         path="/register"
+  //         element={
+  //           <RestrictedRoute
+  //             redirectTo="/contacts"
+  //             component={<RegisterPage />}
+  //           />
+  //         }
+  //       />
+  //       <Route
+  //         path="/login"
+  //         element={
+  //           <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+  //         }
+  //       />
+  //       <Route
+  //         path="/contacts"
+  //         element={
+  //           <PrivateRoute redirectTo="/login" component={<Contacts />} />
+  //         }
+  //       />
+  //     </Route>
+  //   </Routes>
+  // );
 };
 export default App;
