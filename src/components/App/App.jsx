@@ -1,24 +1,24 @@
-import { useDispatch } from 'react-redux';
-import { useEffect, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { RestrictedRoute } from '../RestrictedRoute';
-import { PrivateRoute } from '../PrivateRoute';
-import Layout from '../Layout';
-import authOperations from 'redux/auth/auth-operations';
-import { useAuth } from '../../hooks';
+// import { useDispatch } from 'react-redux';
+// import { useEffect, lazy } from 'react';
+// import { Routes, Route } from 'react-router-dom';
+// import { RestrictedRoute } from '../RestrictedRoute';
+// import { PrivateRoute } from '../PrivateRoute';
+// import Layout from '../Layout';
+// import authOperations from 'redux/auth/auth-operations';
+// import { useAuth } from '../../hooks';
 
-const HomePage = lazy(() => import('../../pages/HomePage'));
-const RegisterPage = lazy(() => import('../../pages/RegisterPage'));
-const LoginPage = lazy(() => import('../../pages/LoginPage'));
-const Contacts = lazy(() => import('../../pages/Contacts'));
+// const HomePage = lazy(() => import('../../pages/HomePage'));
+// const RegisterPage = lazy(() => import('../../pages/RegisterPage'));
+// const LoginPage = lazy(() => import('../../pages/LoginPage'));
+// const Contacts = lazy(() => import('../../pages/Contacts'));
 
 const App = () => {
-  const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  // const dispatch = useDispatch();
+  // const { isRefreshing } = useAuth();
 
-  useEffect(() => {
-    dispatch(authOperations.fetchCurrentUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(authOperations.fetchCurrentUser());
+  // }, [dispatch]);
 
   return <h2> App </h2>;
   // !isRefreshing ? (
