@@ -20,7 +20,7 @@ const App = () => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
-  return !isRefreshing ? (
+  return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
     <Routes>
