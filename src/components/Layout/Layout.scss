@@ -1,3 +1,6 @@
+@import '../../styles/light-theme';
+@import '../../styles/dark-theme';
+
 .Container {
   max-width: 960px;
   margin: 0 auto;
@@ -11,7 +14,8 @@
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid;
+  border-color: inherit;
 
   > nav {
     display: flex;

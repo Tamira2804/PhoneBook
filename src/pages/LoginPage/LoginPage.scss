@@ -8,9 +8,9 @@
   align-items: flex-start;
 
   padding: 16px;
-  border: 1px solid $black;
+  border: 1px solid;
+  border-color: inherit;
   border-radius: 4px;
-  margin-bottom: 20px;
 }
 
 .LoginForm_group {
@@ -26,7 +26,7 @@
   display: block;
   margin-bottom: 5px;
 
-  background-color: $white;
+  background-color: inherit;
   padding: 0 5px;
 }
 

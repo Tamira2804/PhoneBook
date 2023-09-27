@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './AuthNav.scss';
 
-const Navigation = () => (
-  <div className="AuthNav">
+const AuthNav = ({ theme }) => (
+  <div className="AuthNaw__Wrapper">
     <NavLink to="/register" className="AuthNav__link">
       Register
     </NavLink>
@@ -14,4 +14,4 @@ const Navigation = () => (
   </div>
 );
 
-export default Navigation;
+export default AuthNav;

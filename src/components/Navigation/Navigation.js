@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 
 const Navigation = () => (
-  <nav>
+  <nav className="Nav__Wrapper">
     <NavLink to="/" className="Nav__link">
       Home
     </NavLink>

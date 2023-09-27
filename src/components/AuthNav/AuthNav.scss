@@ -1,15 +1,16 @@
-.auth-nav {
+@import 'styles/shared.scss';
+
+.AuthNaw__Wrapper {
   display: flex;
 }
-
-@import 'styles/shared.scss';
 
 .AuthNav__link {
   display: inline-block;
   text-decoration: none;
   padding: 12px;
   font-weight: 700;
-  color: $black;
+  // background-color: $bg-color;
+  color: inherit;
 
   &.active {
     background-color: $indigo;
